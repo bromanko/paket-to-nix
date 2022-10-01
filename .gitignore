@@ -1,0 +1,20 @@
+.DS_Store
+.idea
+*.log
+tmp/
+.direnv
+
+### fsharp ###
+lib/debug
+lib/release
+Debug
+*.suo
+*.user
+obj
+bin
+/build/
+*.exe
+!.paket/paket.bootstrapper.exe
+.ionide/
+.fake
+paket-files/

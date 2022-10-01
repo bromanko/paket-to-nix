@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "paket-to-nix", "src\paket-to-nix\paket-to-nix.fsproj", "{0C557965-1FBB-4547-8862-0B79D27B70E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{F27DC9F0-B2A7-4FED-B830-827ED24D6328}"
+	ProjectSection(SolutionItems) = preProject
+		flake.nix = flake.nix
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C557965-1FBB-4547-8862-0B79D27B70E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C557965-1FBB-4547-8862-0B79D27B70E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C557965-1FBB-4547-8862-0B79D27B70E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C557965-1FBB-4547-8862-0B79D27B70E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
