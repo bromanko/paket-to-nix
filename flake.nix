@@ -11,9 +11,19 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
 
       nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+
+      buildPaketModule = pkgs:
+        import ./nix/build-paket-module { inherit pkgs; };
+
     in {
-      packages = forAllSystems
-        (system: let pkgs = nixpkgsFor.${system}; in { default = { }; });
+      packages = forAllSystems (system:
+        let pkgs = nixpkgsFor.${system};
+        in {
+          default = buildPaketModule pkgs {
+            pname = "paket-to-nix";
+            version = "0.0.1";
+          };
+        });
 
       devShells = forAllSystems (system:
         let pkgs = nixpkgsFor.${system};
